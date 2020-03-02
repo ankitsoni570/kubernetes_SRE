@@ -1,0 +1,24 @@
+188  mkdir helm
+  189  cd helm/
+  190  wget https://get.helm.sh/helm-v3.1.1-linux-amd64.tar.gz
+  192  tar -xvf helm-v3.1.1-linux-amd64.tar.gz 
+  196  cd helm 
+  200  mv linux-amd64 helm
+  203  export PATH=$PATH:/root/anKIT/helm/helm
+  204  helm
+  206  helm init
+  208  cd helm/
+  210  helm start
+  211  cd anKIT/helm/
+  212  helm create testchart
+  225  helm install --dry-run --debug ./testchart/
+  227  helm install --dry-run --debug ./testchart/
+  229  helm install --dry-run --debug --generate-name  ./testchart --kubeconfig ~/.kube/config 
+  230  helm install --dry-run --debug --generate-name  ./testchart --kubeconfig "~/.kube/config"
+  232  helm install --dry-run --debug --generate-name  ./testchart
+  234  helm install --debug --generate-nme ./testchart/
+  235  helm install --debug --generate-name ./testchart/
+  240  helm upgrade -f testchart/values.yaml 
+  241  helm list
+  242  helm upgrade -f testchart/values.yaml estchart-1582630398 ./testchart/
+  243  helm upgrade -f testchart/values.yaml testchart-1582630398 ./testchart/
